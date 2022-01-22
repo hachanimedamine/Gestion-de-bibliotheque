@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="{{asset('style.css')}}" />
+        
+        
+    </head>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Biblio</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    {% if app.session.get('email') != null %}
+<span>Bienvenue {{ app.session.get('email') }}</span>
+<li class="nav-item">
+        <a class="nav-link" href="/collection">Your collection</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/user/deconnexion">Deconnexion</a>
+        
+      </li>
+
+{% else %}
+ <!--route de connexion-->
+ <li class="nav-item active">
+        <a class="nav-link" href="/">Homepage <span class="sr-only">(current)</span></a>
+      </li>
+<li class="nav-item active">
+
+        <a class="nav-link" href="/user/login">Login <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+      <a class="nav-link" href="/livre">ajouter livre <span class="sr-only">(current)</span></a>
+      </li>
+  
+      <li class="nav-item active">
+        <a class="nav-link" href="/auteur">ajouter auteur <span class="sr-only">(current)</span></a>
+          </li>
+      {% endif %}
+      
+      
+  </div>
+</nav>
+
+    <body>
+        {% block body %}
+{% endblock %}
+    </body>
+</html>

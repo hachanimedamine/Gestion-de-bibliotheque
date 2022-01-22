@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Livre Emprunter{% endblock %}
+
+{% block body %}
+    <h1>Livre Emprunter</h1>
+
+    <table class="table">
+        <thead>
+        
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+            
+            </tr>
+          
+        </thead>
+        <tbody>
+
+        {% for Emprunter in Emprunter %}
+            <tr>
+                <td>{{ Emprunter.id }}</td>
+                <td>{{ Emprunter.titre }}</td>
+               
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

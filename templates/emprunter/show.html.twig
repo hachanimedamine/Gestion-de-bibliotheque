@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Emprunter{% endblock %}
+
+{% block body %}
+    <h1>Emprunter</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ emprunter.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ emprunter.titre }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('emprunter_index') }}">back to list</a>
+
+    
+{% endblock %}

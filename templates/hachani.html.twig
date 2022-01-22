@@ -1,0 +1,16 @@
+{% block body %}
+<div class="wrapper">
+	<div class="container">
+		<h1>Welcome</h1>
+		
+		<form class="form" action="/user/connexion" method="post">
+			<input type="text" placeholder="email" name="email"required  >
+			<input type="password" placeholder="Password" name="pswd"required>
+			<button type="submit" id="login-button">Login</button>
+			<img src="https://i.goopics.net/6khs3b.jpg" alt=""  width="1500" height="650"/>
+		</form>
+	</div>
+	
+</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+ {% extends 'base.html.twig' %}
+{% block title %}Homepage{% endblock %}
+
+{% block body %}
+<h1>Your collection</h1>
+ <table border="solid">
+      <tr>
+      <th scope="col">Titre</th>
+      <th scope="col">ID</th>
+       
+      </tr>
+      {% for i in emprunter %}
+  <tr>
+  <td> <br>{{i.titre}}</td>
+  <td> <br>{{i.id}}</td>
+ 
+  {% endfor %}
+  
+
+  {% endblock %}

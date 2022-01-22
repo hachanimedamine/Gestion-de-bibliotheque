@@ -1,0 +1,23 @@
+ {% extends 'base.html.twig' %}
+{% block title %}Homepage{% endblock %}
+
+{% block body %}
+ <table border="solid">
+      <tr>
+      <th scope="col">Titre</th>
+      <th scope="col">Description</th>
+      <th scope="col">Datepublication</th>
+      </tr>
+      {% for i in Livres %}
+  <tr>
+  <td> <br>{{i.titre}}</td>
+  
+  <td> <br>{{i.description}}</td>
+  
+  <td><br>{{i.getDatepublication|date("d/m/Y")}}</td>
+  <form class="form" action="/emprunter" method="get" >
+  <td><button type="submit" name="emp">Emprunter</button>  </td>
+  {% endfor %}
+  
+
+  {% endblock %}

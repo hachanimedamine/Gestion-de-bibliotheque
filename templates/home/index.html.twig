@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block title %}Homepage{% endblock %}
+{% block body %}
+<form method="get" action="/recherche" class="d-flex col-md-6">
+        <input name="cab" class="form-control me-2" type="text" placeholder="Recherche" aria-label="Recherche">
+        <button class="btn btn-outline-success" type="submit">Recherche</button>
+      </form>
+<br></br>
+
+{% if app.session.get('email') != null %}
+<span {{ app.session.get('email') }}</span>
+<form method="get" action="/list" class="d-flex col-md-6">
+ <input name="cabb" class="form-control me-2" type="text" placeholder="VOIR NOS LISTE DES LIVRES" aria-label="VOIR NOS LISTE DES LIVRES">
+  <button class="btn btn-outline-success" type="submit">Recherche</button>
+  </tr>
+   </form>
+  <br></br> 
+<a href="https://goopics.net/i/6q1bcd"><img src="https://i.goopics.net/6q1bcd.png" alt="Image" width="1535" height="500"></a>
+     
+
+
+  {% else %}
+  <img src="https://i.goopics.net/6khs3b.jpg" alt=""  width="1550" height="650"/>
+     
+
+{% endif %}
+{% endblock %}
+

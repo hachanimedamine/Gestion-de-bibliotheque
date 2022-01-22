@@ -1,0 +1,58 @@
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css);
+html, body {
+    height: 100%;
+    margin: 0;
+}
+a, a:hover, a:focus, a:active{
+    text-decoration: none;
+    color: inherit;
+}
+.content {
+    min-height: calc(100vh - 50px);
+}
+.footer {
+    height: 50px;
+    text-align: center;
+    color: #fff;
+}
+.title,.user-name{
+    padding: 0;
+    margin: 0;
+}
+.user-name{
+    color: #fff;
+}
+.list-genres,.recherche {
+    margin: 10px 0;
+    align-items: center;
+}
+.list-genres span{
+     font-size: 15px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     margin: 0 5px;
+}
+.list-music .row .col-md-3{
+    margin: 10px 0;
+}
+.music-title{
+    text-align: center;
+}
+.music-label{
+    font-weight: bold;
+}
+.recherche form {
+    text-align: center;
+}
+.inscri-form{
+    margin: 10px auto;
+    text-align: center;
+}
+.inscri-form input {
+    width: 70%;
+    margin: 15px auto;
+}
+.inscri-form button {
+    margin: 15px;
+    width: 30%;
+}

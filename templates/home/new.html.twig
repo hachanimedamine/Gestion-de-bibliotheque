@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Emprunter{% endblock %}
+
+{% block body %}
+    <h1>Emprunter livre</h1>
+
+    {{ include('livre/_form.html.twig') }}
+
+    <a href="{{ path('livre_index') }}">back to list</a>
+{% endblock %}

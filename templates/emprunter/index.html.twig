@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Emprunter index{% endblock %}
+
+{% block body %}
+    <h1>Emprunter index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for emprunter in emprunters %}
+            <tr>
+                <td>{{ emprunter.id }}</td>
+                <td>{{ emprunter.titre }}</td>
+                <td>
+                    <a href="{{ path('emprunter_show', {'id': emprunter.id}) }}">show</a>
+                    <a href="{{ path('emprunter_edit', {'id': emprunter.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('emprunter_new') }}">Emprunter le livre</a>
+    
+    
+    
+{% endblock %}

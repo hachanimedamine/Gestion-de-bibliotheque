@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<link rel="stylesheet" href="{{asset('style.css')}}" />
+        
+
+{% if Auteur %}
+
+     <table border="solid">
+      <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">Prenom</th>
+      <th scope="col">Nationality</th>
+      </tr>
+      {% for i in Auteur %}
+  <tr>
+  <td> <br>{{i.nom}}</td>
+  
+  <td> <br>{{i.prenom}}</td>
+  
+  <td><br>{{i.nationalite}}</td>
+  
+  
+  </tr>
+  {% endfor %}
+  {% elseif Livre %}
+
+</table>
+
+
+<table border="solid">
+      <tr>
+      <th scope="col">Titre</th>
+      <th scope="col">Description</th>
+      <th scope="col">Datepublication</th>
+      </tr>
+      {% for i in Livre %}
+  <tr>
+  <td> <br>{{i.titre}}</td>
+  
+  <td> <br>{{i.description}}</td>
+  
+  <td><br>{{i.getDatepublication|date("d/m/Y")}}</td>
+  
+  
+  </tr>
+  {% endfor %}
+</table>
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+  
+ 
+{% endblock %}
